@@ -10,13 +10,16 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Привет Мир");
+            int x, y;
+            x = 5;
+            y = 2;
+            Console.WriteLine(Convert.ToSingle(x)/y);
             Console.ReadKey();
             // Основные типы int | float | char| string | bool
-            float f = 5.7f;
-            int age = 27;
-            char c = ' ';
-            string str = "Привет, как дела";
+         //   float f = 5.7f;
+          //  int age = 27;
+          //  char c = ' ';
+          //  string str = "Привет, как дела";
             
         }
     }
