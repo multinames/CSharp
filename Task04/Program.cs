@@ -1,8 +1,8 @@
-﻿Console.WriteLine("Введите число");
+﻿// Вывод всех целых числе из диапазона
+Console.WriteLine("Введите число");
 
 int numberA = int.Parse(Console.ReadLine());
 int numberB = numberA*-1;
-// int i  = numberB;
 
 if (numberA > 0 ) {
 Console.WriteLine("Все целые числа:");

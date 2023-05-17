@@ -1,4 +1,5 @@
-﻿Console.WriteLine("Введите число");
+﻿// Оставить последнее число из многозначного
+Console.WriteLine("Введите число");
 string numberA = Console.ReadLine();
 int len = numberA.Length-1;
 if (len > 0) {
