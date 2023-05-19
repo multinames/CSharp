@@ -8,7 +8,3 @@ Console.WriteLine(numberA.Remove(0, len));
 else {
 Console.WriteLine(numberA);
 }
-
-
-
-

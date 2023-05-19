@@ -1,22 +1,5 @@
-﻿// Вывод всех целых числе из диапазона
-Console.WriteLine("Введите число");
+﻿// Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
+Console.WriteLine("Введите два числа");
 
-int numberA = int.Parse(Console.ReadLine());
-int numberB = numberA*-1;
-
-if (numberA > 0 ) {
-Console.WriteLine("Все целые числа:");
-for (int i  = numberB;i < numberA+1; i++) {
-
-    Console.WriteLine(i);
-}
- }
-else {
-Console.WriteLine("Все целые числа:");
-for (int i  = numberA;i < numberB+1; i++) {
-
-    Console.WriteLine(i);
-    }
-}
 
     
