@@ -10,15 +10,15 @@ if ((int.TryParse(str, out int num)) == false) {
 }
 
 // Определение числа по модулю
-int nnn=Math.Abs(Convert.ToInt32(str));
+num = Math.Abs(Convert.ToInt32(str));
 
 // Проверка числа на разрядность   
-if (nnn.ToString().Length != 3) {
+if (num.ToString().Length != 3) {
     Console.WriteLine("Число не трехзначное");
     return;
 }  
 
 // Вывод второй цифры
-Console.WriteLine("Вторая цифра в " + nnn + " равна "+ nnn.ToString()[1]);
+Console.WriteLine("Вторая цифра в " + num + " равна "+ num.ToString()[1]);
 
 
