@@ -1,4 +1,5 @@
-﻿// Задача 21:
+﻿// Задача 21. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+
 
 int Prompt (string message) {
 Console.Write(message);
@@ -8,16 +9,15 @@ return num;
 
 int x1 = Prompt ("Введите координату X точки A: ");
 int y1 = Prompt ("Введите координату Y точки A: ");
+int z1 = Prompt ("Введите координату Z точки A: ");
 
 int x2 = Prompt ("Введите координату X точки B: ");
 int y2 = Prompt ("Введите координату Y точки B: ");
+int z2 = Prompt ("Введите координату Z точки B: ");
 
-void CalcDist (int x1, int y1, int x2, int y2) {
-    double d = Math.Sqrt((x1-x2)*(x1-x2)+(y1-y2)*(x1-x2));
+void CalcDist (int x1, int y1, int z1, int x2, int y2, int z2) {
+    double d = Math.Sqrt(Math.Pow(x2-x1,2)+Math.Pow(y2-y1,2)+Math.Pow(z2-z1,2));
     Console.WriteLine("Расстояние между точками: "+d);
 }
 
-CalcDist(x1, y1, x2, y2);
-
-
-
+CalcDist(x1, y1, z1, x2, y2, z2);
