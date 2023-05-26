@@ -2,8 +2,13 @@
 
 int Prompt (string message) {
 Console.Write(message);
-int num = int.Parse(Console.ReadLine()!);
-return num;
+string num = Console.ReadLine()!;
+
+    if ((int.TryParse(num, out int num_n)) == false) {
+    Console.WriteLine("Это не число!");   
+    }
+
+return num_n;
 }
 
 void PrintDegreTable(int number)
@@ -14,14 +19,13 @@ void PrintDegreTable(int number)
     }
 }
 
-
 int num = Prompt ("Введите число N: ");
 
 // Определение числа по модулю
 int number = Math.Abs(num);
 
-
 PrintDegreTable(number);
+
 
 
 
