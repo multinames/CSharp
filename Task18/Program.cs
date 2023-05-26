@@ -8,6 +8,8 @@ int num = Convert.ToInt32(Console.ReadLine());
 return num;
 }
 
+ShowQuarter(num);
+
 void FindCoordinate (int num) {
     if ( num == 1) {
     Console.WriteLine("I четверть X > 0, Y > 0");
@@ -24,13 +26,15 @@ void FindCoordinate (int num) {
     
 }
 
+void ShowQuarter (int num) {
+
 if (num <1 || num >4) {
 
     Console.WriteLine("Введена не правильная четверть");
     }
 else {
     FindCoordinate (num);
+    }
 }
-
 
 
