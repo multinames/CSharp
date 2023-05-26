@@ -4,7 +4,7 @@ int num = Prompt ("Введите номер четверти: ");
 
 int Prompt (string message) {
 Console.Write(message);
-int num = Convert.ToInt32(Console.ReadLine());
+int num = int.Parse(Console.ReadLine()!);
 return num;
 }
 
