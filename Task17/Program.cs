@@ -1,7 +1,4 @@
 ﻿// Задача 17:
-// Console.WriteLine("Введите X и Y");
-// int numberX = Convert.ToInt32(Console.ReadLine());
-// int numberY = Convert.ToInt32(Console.ReadLine());
 
 int x = Prompt ("Введите координату X: ");
 int y = Prompt ("Введите координату Y: ");
