@@ -13,18 +13,22 @@ string num = Console.ReadLine()!;
 return num_check;
 }
 
+void ToExpo(int num_a, int num_b) {
+    // Определение переменных для цикла
+    int i=1;
+    int result=num_a;
+
+    //Цикл возведение в степень
+    while (i != num_b) {
+        result=result*num_a;
+        i++;
+    }
+
+    Console.WriteLine("Полученное число: " + result);
+}
+
 // Ввод данных
 int num_a = Prompt ("Введите число A: ");
 int num_b = Prompt ("Введите число B: ");
 
-// Определение переменных
-int i=1;
-int result=num_a;
-
-//Цикл возведение в степень
-while (i != num_b) {
-    result=result*num_a;
-    i++;
-}
-
-Console.WriteLine("Полученное число: " + result);
+ToExpo(num_a,num_b);
