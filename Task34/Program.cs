@@ -10,16 +10,6 @@ int[] GetArray(int size, int minValue, int maxValue)
     return res;
 }
 
-void PrintArray(int[] arr)
-{
-    for(int i=0; i<arr.Length;i++) 
-    {
-           // Console.Write($"{arr[i]} ");
-    }
-
-
-}
-
 void CheckEvNum(int[] arr) 
   {
     int i=0;
@@ -27,8 +17,7 @@ void CheckEvNum(int[] arr)
         if ((el % 2) == 0) {
         i+=1 ; }
   }
-    Console.Write($"Количество четных чисел равна {i}");
+    Console.Write($"Количество четных чисел равно {i}");
 }
 int[] arr = GetArray(5,100,999);
-PrintArray(arr);
 CheckEvNum(arr);
