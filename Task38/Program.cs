@@ -25,8 +25,8 @@ void PrintArray(double[] arr)
 }
 
 void FindDiffNum(double[] arr) 
-{
 // Нахождение разницы между максимальным и минимальным элементов массива
+{
 Console.WriteLine();
 Console.WriteLine("Минимальное число массива: "+ "{0:0.00}", arr.Min());
 Console.WriteLine("Максимальное число массива: "+ "{0:0.00}", arr.Max());
