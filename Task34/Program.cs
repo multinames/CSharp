@@ -1,5 +1,7 @@
 ﻿// Задача 34. Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+
 int[] GetArray(int size, int minValue, int maxValue)
+// Заполнение массива случайными числами
 {
     int[] res = new int[size];
     
@@ -11,6 +13,7 @@ int[] GetArray(int size, int minValue, int maxValue)
 }
 
 void CheckEvNum(int[] arr) 
+// Вывод количество чётных чисел в массиве
   {
     int i=0;
     foreach(int el in arr) {
