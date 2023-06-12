@@ -22,13 +22,13 @@ void PrintArray(int[] arr)
 }
 
 void FindSum(int[] arr) {
-int possitiveSum = 0;
+int positiveSum = 0;
 int negativeSum = 0;
 
 foreach(int el in arr) {
     if (el >0 ) 
         {
-            possitiveSum+=el;
+            positiveSum+=el;
         }
 
     else if (el <0 ) 
@@ -37,7 +37,7 @@ foreach(int el in arr) {
         }
 }
 Console.WriteLine();
-Console.WriteLine($"Сумма положителдьныйх чисел равна: {possitiveSum}, сумма отрицателдьныйх числе равна: {negativeSum}");
+Console.WriteLine($"Сумма положительных чисел равна: {positiveSum}, сумма отрицательных числе равна: {negativeSum}");
 }
 
 int[] array2=GetArray(12,-9, 9);
