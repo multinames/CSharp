@@ -40,44 +40,43 @@ for(int i=0; i < inArray.GetLength(0); i++) // Отвечает за столб�
     } 
 }
 
-void SearchArray(int[,] inArray, int rows, int columns, int m, int n) 
-// Поиск элемента по указанным значеним и проверка его наличия
+void SearchArray(int[,] inArray, int row, int column, int m, int n) 
+// Поиск элмента по указанным значеним и проверка его наличия
 {
 
 int r1=0;
 int c1=0;
 
-if (rows > m-1 || columns > m-1 || rows < 0 || columns < 0) 
+if (row > m-1 || column > m-1 || row < 0 || column < 0) 
     {
-        Console.Write("Не такой позиции в массиве");
+        Console.Write($"[{row},{column}] нет такой позиции в массиве");
     }
 else {
 
     for(int i=0; i < inArray.GetLength(0); i++) // Отвечает за столбцы 
     
-        if (i == rows) 
+        if (i == row) 
         {
             r1=i;
             for(int j = 0; j < inArray.GetLength(1); j++) // Отвечает за строки
                 {
                 // Console.Write($"{inArray[i, j]} ");
-                if (j==columns) 
+                if (j==column) 
                         {
                 c1=j;
                 }
             }
         }
-        Console.Write($"Значение указаного элемент {inArray[r1, c1]} ");      
+        Console.Write($"[{row},{column}] позиция элемента {inArray[r1, c1]} ");
     }
 }   
 
-
-int rows = Prompt("Укажите позицию строки элемента: ");
-int columns = Prompt("Укажите позицию столбца элемента: ");
+int row = Prompt("Укажите позицию строки элемента: ");
+int column = Prompt("Укажите позицию столбца элемента: ");
 
 // задаем размерность массива
-int m = 10;
-int n = 10;
+int m = 4;
+int n = 4;
 
 // создание массива
 int[,] array = GetArray(m, n, 0, 10);
@@ -85,4 +84,4 @@ int[,] array = GetArray(m, n, 0, 10);
 
 PrintArray(array);
 
-SearchArray(array, rows, columns, m, n);
+SearchArray(array, row, column, m, n);
