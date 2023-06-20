@@ -1,5 +1,4 @@
 ﻿// Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
-Console.Clear();
 
 int[,] GetArray(int m, int n, int minValue, int maxValue) 
 {
@@ -15,7 +14,20 @@ int[,] GetArray(int m, int n, int minValue, int maxValue)
     return result;
 }
 
+void PrintArraySingle(int[] arr)
+{
+    for(int i=0; i<arr.Length;i++) 
+    {
+           Console.Write($"{arr[i]} ");
+    }
+
+
+}
+
 void PrintArray(int[,] inArray) {
+
+Console.WriteLine($"Исходный массив: ");
+
 for(int i=0; i < inArray.GetLength(0); i++) // Отвечает за столбцы 
     {
     for(int j = 0; j < inArray.GetLength(1); j++) // Отвечает за строки
@@ -27,21 +39,25 @@ for(int i=0; i < inArray.GetLength(0); i++) // Отвечает за столб�
     } 
 }
 
-void GetValueArray(int[,] inArray) 
+void GetSortArray(int[,] inArray) 
 {
-  // Console.Write($"Среднее арифметическое каждого столбца: ");
+  Console.WriteLine($"Отсортированный массив: ");
+  
   
   for(int i=0; i < inArray.GetLength(0); i++) 
     
     {
-    double sum =0;
-     for(int j = 0; j < inArray.GetLength(1); j++) 
+        int[] res = new int[inArray.GetLength(1)];
+         for(int j = 0; j < inArray.GetLength(1); j++) 
+          
             {
-               sum+=inArray[i, j];
-            }
-    // double res = Math.Round( sum / inArray.GetLength(1), 2);
-         
-     Console.Write($"{sum} ");
+               
+               res[j] = inArray[i, j];
+            }   
+                Array.Sort(res);
+                Array.Reverse(res);
+                PrintArraySingle(res);
+                Console.WriteLine();     
      }
      
 }
@@ -52,7 +68,8 @@ int columns = 4;
 
 // создание массива
 int[,] array = GetArray(rows, columns, 0, 10);
-
+int[,] inOutArray = new int[rows, columns];
 
 PrintArray(array);
-GetValueArray(array);
+Console.WriteLine();
+GetSortArray(array);
