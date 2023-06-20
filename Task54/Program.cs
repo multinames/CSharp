@@ -20,8 +20,6 @@ void PrintArraySingle(int[] arr)
     {
            Console.Write($"{arr[i]} ");
     }
-
-
 }
 
 void PrintArray(int[,] inArray) {
@@ -33,7 +31,6 @@ for(int i=0; i < inArray.GetLength(0); i++) // Отвечает за столб�
     for(int j = 0; j < inArray.GetLength(1); j++) // Отвечает за строки
         {
             Console.Write($"{inArray[i, j]} ");
-
         }
     Console.WriteLine();
     } 
